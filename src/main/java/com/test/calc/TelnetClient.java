@@ -3,8 +3,16 @@ package com.test.calc;
 import java.io.*;
 import java.net.Socket;
 
+/**
+ * Telnet client API
+ */
 public class TelnetClient {
 
+    /**
+     * Create new socket connection to server
+     * @param host server host name
+     * @param port server port
+     */
     public void connect(final String host, final int port) {
         System.out.println("Try to connect to server "+host + " on port "+port+".");
         try (final var socket = new Socket(host, port)) {
@@ -15,6 +23,10 @@ public class TelnetClient {
         }
     }
 
+    /**
+     * Process socket connection
+     * @param socket socket connection
+     */
     private void processSocket(final Socket socket) {
         try (final var out = new PrintWriter(socket.getOutputStream());
              final var in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
