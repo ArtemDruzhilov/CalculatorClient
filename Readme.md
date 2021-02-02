@@ -1,7 +1,7 @@
 # Calculator client
 
-TCP client providing a service for performing simple arithmetic calculations
-You can find the server code at the link https://github.com/ArtemDruzhilov/CalculatorServer
+TCP client providing a service for performing simple arithmetic calculations.
+The server code can be found at https://github.com/ArtemDruzhilov/CalculatorServer.
 
 Build
 
